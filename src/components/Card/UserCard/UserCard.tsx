@@ -1,15 +1,16 @@
-import type { GitHubUser } from '../../types';
+import type { GitHubUser } from '../../../types';
 import { UserTitle } from '../UserTitle';
-import styles from './Card.module.scss';
 import { UserStats } from '../UserStats';
 import { UserInfo } from '../UserInfo';
+
+import styles from './UserCard.module.scss';
 
 interface CardProps {
   user: GitHubUser | null;
   isError: boolean;
 }
 
-export const Card = ({ user, isError }: CardProps) => {
+export const UserCard = ({ user, isError }: CardProps) => {
   if (isError || !user) {
     return <p>No user found</p>;
   }

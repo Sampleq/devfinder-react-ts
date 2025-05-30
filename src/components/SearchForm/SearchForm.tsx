@@ -3,7 +3,7 @@ import styles from './SearchForm.module.scss';
 
 import SearchIcon from '../../assets/icon-search.svg?react';
 
-import { Button } from '../Button';
+import { Button } from '../UI/Button';
 
 interface SearchFormProps {
   isError: boolean;
@@ -32,8 +32,12 @@ export const SearchForm = ({ isError, submitHadler }: SearchFormProps) => {
       className={styles.searchForm}
       onSubmit={e => {
         e.preventDefault();
-        submitHadler(e.currentTarget.searchInput.value);
-        setInputText('');
+
+        if (inputText.trim()) {
+          // submitHadler(e.currentTarget.searchInput.value); // OK
+          submitHadler(inputText); // OK
+          setInputText('');
+        }
       }}
     >
       <label htmlFor='searchInput'>

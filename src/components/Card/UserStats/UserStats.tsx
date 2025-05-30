@@ -1,4 +1,4 @@
-import type { GitHubUser } from '../../types';
+import type { GitHubUser } from '../../../types';
 import styles from './UserStats.module.scss';
 
 interface UserStatsProps

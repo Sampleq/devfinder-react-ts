@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import './App.scss';
-import { Card } from './components/Card';
+import { UserCard } from './components/Card/UserCard';
 
 import { Container } from './components/Container';
 import { Header } from './components/Header';
@@ -42,7 +42,7 @@ function App() {
         <Header />
         <SearchForm isError={isError} submitHadler={submitHadler} />
 
-        <Card user={user} isError={isError} />
+        <UserCard user={user} isError={isError} />
       </Container>
     </>
   );

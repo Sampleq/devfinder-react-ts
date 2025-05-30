@@ -1,4 +1,4 @@
-import type { GitHubUser } from '../../types';
+import type { GitHubUser } from '../../../types';
 import styles from './UserTitle.module.scss';
 
 interface UserTitleProps
