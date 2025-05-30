@@ -1,0 +1,40 @@
+:global {
+  body[data-theme='light'] {
+    --card-bg: var(--white);
+    --bio-color: var(--gray-200);
+  }
+  body[data-theme='dark'] {
+    --card-bg: var(--gray-400);
+    --bio-color: var(--gray-50);
+  }
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 7rem 1fr;
+  row-gap: 2.5rem;
+  column-gap: 3rem;
+
+  background-color: var(--card-bg);
+
+  padding: 3rem;
+  border-radius: 1.5rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 12rem 1fr;
+    row-gap: 3rem;
+    column-gap: 4rem;
+
+    padding: 4rem;
+  }
+
+  & > img {
+    max-width: 100%;
+    border-radius: 50%;
+  }
+
+  .bio {
+    grid-column: 1 / span 2;
+    color: var(--bio-color);
+  }
+}

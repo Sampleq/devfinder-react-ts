@@ -1,0 +1,39 @@
+:global {
+  body[data-theme='light'] {
+    --stat-bg: var(--gray-50);
+    --stat-color: var(--gray-500);
+  }
+  body[data-theme='dark'] {
+    --stat-bg: var(--gray-500);
+    --stat-color: var(--gray-50);
+  }
+}
+
+.userStats {
+  grid-column-start: 1;
+  grid-column-end: span 2;
+
+  display: flex;
+  justify-content: space-between;
+
+  background-color: var(--stat-bg);
+  border-radius: 1rem;
+  padding: 2rem 3rem;
+
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  & h4 {
+    margin: 0;
+    color: var(--gray-200);
+    font-weight: 400;
+  }
+
+  & span {
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--stat-color);
+  }
+}

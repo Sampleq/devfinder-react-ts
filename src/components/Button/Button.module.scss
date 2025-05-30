@@ -1,0 +1,28 @@
+.button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  color: var(--white);
+  padding: 1.5rem 2rem;
+
+  border-radius: 1rem;
+
+  background-color: var(--main-color);
+
+  &:hover {
+    background-color: var(--main-color-hover);
+  }
+
+  @media (min-width: 768px) {
+    padding: 1.5rem 3rem;
+  }
+
+  span {
+    display: none;
+
+    @media (min-width: 480px) {
+      display: inline;
+    }
+  }
+}

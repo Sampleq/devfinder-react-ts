@@ -1,0 +1,43 @@
+:global {
+  body[data-theme='light'] {
+    --info-color: var(--gray-200);
+  }
+
+  body[data-theme='dark'] {
+    --info-color: var(--gray-50);
+  }
+}
+
+.userInfo {
+  grid-column-start: 1;
+  grid-column-end: span 2;
+
+  display: grid;
+  row-gap: 1.5rem;
+
+  color: var(--info-color);
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1.5rem;
+  }
+
+  svg {
+    width: 2rem;
+    fill: var(--info-color);
+    margin-right: 1rem;
+
+    @media (min-width: 768px) {
+      margin-right: 1.5rem;
+    }
+  }
+
+  a {
+    color: var(--info-color);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
